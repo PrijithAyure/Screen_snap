@@ -5,21 +5,71 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Screenshot Tool</title>
   <style>
+    /* General Styling */
     body {
       font-family: Arial, sans-serif;
-      text-align: center;
-      padding: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 200px;
+      margin: 0;
+      background: linear-gradient(135deg, #74ebd5, #9face6);
+      overflow: hidden;
     }
+
+    /* Glassmorphism Container */
+    body > div {
+      background: rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      border-radius: 15px;
+      padding: 20px;
+      width: 300px;
+      text-align: center;
+    }
+
+    /* Heading Styling */
+    h3 {
+      margin: 0 0 15px;
+      font-size: 18px;
+      color: #ffffff;
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Button Styling */
     button {
-      padding: 10px 15px;
+      padding: 10px 20px;
       font-size: 14px;
+      color: #ffffff;
+      background: rgba(255, 255, 255, 0.3);
+      border: none;
+      border-radius: 8px;
+      backdrop-filter: blur(5px);
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    button:hover {
+      background: rgba(255, 255, 255, 0.5);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Status Text Styling */
+    #status {
+      margin-top: 10px;
+      font-size: 12px;
+      color: #ffffff;
+      text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
     }
   </style>
 </head>
 <body>
-  <h3>Screenshot Tool</h3>
-  <button id="screenshot-btn">Take Screenshot</button>
-  <p id="status"></p>
+  <div>
+    <h3>Screenshot Tool</h3>
+    <button id="screenshot-btn">Take Screenshot</button>
+    <p id="status"></p>
+  </div>
   <script src="popup.js"></script>
 </body>
 </html>
